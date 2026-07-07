@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void)
+{
+    float a;
+    float b;
+    float h;
+    scanf("%f%f%f", &a, &b, &h);
+    printf("%.1f", ((a+b)/2)*h);
+
+    return 0;
+}
