@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char S1[20];
+    char S2[20];
+    scanf("%s %s", S1, S2);
+    int found = 0;
+    for (int i = 0; i <= strlen(S1) - strlen(S2); i++) {
+        int j;
+        for (j = 0; j < strlen(S2); j++) {
+            if (S1[i + j] != S2[j]) {
+                break;
+            }
+        }
+        if (j == strlen(S2)) {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found) {
+        printf("YES");
+    } else {
+        printf("NO");
+    }
+
+    return 0;
+}
