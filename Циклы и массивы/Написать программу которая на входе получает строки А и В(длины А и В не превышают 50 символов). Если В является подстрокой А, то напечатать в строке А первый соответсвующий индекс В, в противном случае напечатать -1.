@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    char A[50];
+    char B[50];
+    scanf("%s", A);
+    scanf("%s", B);
+    if(strlen(B) <= strlen(A)) {
+        for(int i = 0; i <= (strlen(A) - strlen(B)); i++) {
+            int j;
+            for(j = 0; j < strlen(B); j++) {
+                if(A[i + j] != B[j]) {
+                    break;
+                }
+            }
+            if(j == strlen(B)) {
+                printf("%d", i);
+                return 0;
+            }
+        }
+        printf("-1");
+    } else {
+        printf("-1");
+    }
+    return 0;
+}
