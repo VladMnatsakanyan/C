@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+double distance(double x1, double y1, double x2, double y2) {
+    return sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2));
+}
+
+int main(void) {
+    double Ax, Ay, Bx, By, Cx, Cy;
+    scanf("%lf %lf", &Ax, &Ay);
+    scanf("%lf %lf", &Bx, &By);
+    scanf("%lf %lf", &Cx, &Cy);
+
+    double AB = distance(Ax, Ay, Bx, By);
+    double BC = distance(Bx, By, Cx, Cy);
+    double CA = distance(Cx, Cy, Ax, Ay);
+
+    double Dx = (CA * Bx + BC * Ax) / (CA + BC);
+    double Dy = (CA * By + BC * Ay) / (CA + BC);
+
+    double Ex = (AB * Cx + CA * Bx) / (AB + CA);
+    double Ey = (AB * Cy + CA * By) / (AB + CA);
+    
+    double Fx = (AB * Cx + BC * Ax) / (AB + BC);
+    double Fy = (AB * Cy + BC * Ay) / (AB + BC);
+
+    printf("%.5f %.5f\n", Dx, Dy);
+    printf("%.5f %.5f\n", Ex, Ey);
+    printf("%.5f %.5f\n", Fx, Fy);
+
+    return 0;
+}
