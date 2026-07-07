@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int gumar(int A, int B) {
+    return A + B;
+}
+int hanum(int A, int B) {
+    return A - B;
+}
+int bajanum(int A, int B) {
+    return A / B;
+}
+int tokos(int A, int B) {
+    return A % B;
+}
+int bazmapatkum(int A, int B) {
+    return A * B;
+}
+int main(void)
+{
+    int a;
+    int b;
+    char o;
+    int ardyunq;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf(" %c", &o);
+    if(o == '+') {
+        ardyunq = gumar(a, b);
+        printf("%d", ardyunq);
+    }
+    if(o == '-') {
+        ardyunq = hanum(a, b);
+        printf("%d", ardyunq);
+    }
+    if(o == '/') {
+        ardyunq = bajanum(a, b);
+        printf("%d", ardyunq);
+    }
+    if(o == '%') {
+        ardyunq = tokos(a, b);
+        printf("%d", ardyunq);
+    }
+    if(o == '*') {
+        ardyunq = bazmapatkum(a, b);
+        printf("%d", ardyunq);
+    }
+    return 0;
+}
