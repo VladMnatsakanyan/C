@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int N, K;
+int arr[15];
+
+void gen(int tex, int start) {
+    if (tex == K) {
+        for (int i = 0; i < K; i++) {
+            printf("%d ", arr[i]);
+        }
+        printf("\n");
+        return; 
+    }
+
+    for (int i = start; i < N; i++) {
+        arr[tex] = i;
+        gen(tex + 1, i + 1);
+    }
+}
+
+int main(void) {
+    scanf("%d %d", &N, &K);
+    gen(0, 0);
+    return 0;
+}
