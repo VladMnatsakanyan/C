@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int a;
+    int b;
+    int c;
+    float d;
+    scanf("%d%d%d%f", &a, &b, &c, &d);
+    printf("%f", (a+b+c)/d);
+
+    return 0;
+}
