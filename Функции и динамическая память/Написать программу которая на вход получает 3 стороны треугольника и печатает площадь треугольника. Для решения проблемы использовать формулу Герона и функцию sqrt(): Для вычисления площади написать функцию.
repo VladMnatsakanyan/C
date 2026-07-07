@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+double makeres(double a, double b, double c) {
+    double p = (a+b+c) / 2;
+    double area = sqrt(p*(p-a)*(p-b)*(p-c));
+    return area;
+}
+int main(void)
+{
+    double x;
+    double y;
+    double z;
+    scanf("%lf", &x);
+    scanf("%lf", &y);
+    scanf("%lf", &z);
+    double ardyunq = makeres(x, y, z);
+    printf("%lf", ardyunq);
+    return 0;
+}
