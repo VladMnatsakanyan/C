@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int a;
+    int b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    int count = 0;
+    for(int i = a; i<=b; i++) {
+        if(a%7==0) {
+            count++;
+        }
+        a++;
+    }
+    printf("%d", count);
+    return 0;
+}
