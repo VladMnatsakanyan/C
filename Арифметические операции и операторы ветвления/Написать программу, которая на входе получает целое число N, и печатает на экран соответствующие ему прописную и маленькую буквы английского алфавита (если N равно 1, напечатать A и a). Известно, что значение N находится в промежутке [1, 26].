@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int symb;
+    scanf("%d", &symb);
+    int symb1;
+    symb1 = symb+96;
+    char code = symb1;
+    char code2 = symb1-32;
+    printf("%c %c", code, code2);
+
+    return 0;
+}
